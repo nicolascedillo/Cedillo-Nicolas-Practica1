@@ -2,6 +2,7 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Cafeteria Luca - Café Ecuatoriano</title>
         <link rel="stylesheet" href="css/estilos.css">
     </head>
@@ -38,18 +39,13 @@
 
                 <article>
                     <h3>Café de especialidad</h3>
-                    Capuccinos, espresos, americanos, 
+                    Capuccinos, expresos, americanos, mocaccinos y flats
                 </article>
 
                 <article>
                     <h3>Postres</h3>
                     <p>Tiramisus, tartas vascas y clasicos cheesecakes</p>
                 </article>
-            </section>
-
-            <section id="ordenar">
-                
-
             </section>
 
             <section id ="horarios">
@@ -104,12 +100,86 @@
 
                         <tr>
                             <th scope="row">Domingo</th>
-                            <td>09:00</td>
-                            <td>19:00</td>
+                            <td>15:00</td>
+                            <td>18:00</td>
                         </tr>
                     </tbody>
                 </table>
 
+            </section>
+
+            <section id="ordenar">
+                <h2>Pedidos online</h2>
+                <p>Lo notificaremos por mail cuando esté listo. Los campos con el * son olbigatorios</p>
+
+                <form>
+
+                    <fieldset>
+                        <legend>Bebida y postre</legend>
+
+                         <datalist id="lista-cafes">
+                            <option value="Café americano"></option>
+                            <option value="Capuchino"></option>
+                            <option value="Mocaccino"></option>
+                            <option value="Chocolate caliente"></option>
+                            <option value="Agua aromática"></option>
+                        </datalist>
+
+                        <datalist id="lista-postres">
+                            <option value="Tarta Vasca"></option>
+                            <option value="Tiramisú"></option>
+                            <option value="Mocaccino"></option>
+                        </datalist>
+
+                        <datalist id="lista-tipos_leche">
+                            <option value="Leche entera"></option>
+                            <option value="Leche semidescremada"></option>
+                            <option value="Leche deslactosada"></option>
+                            <option value="Leche de almendras"></option>
+                        </datalist>
+
+
+                        <div>
+
+                            <p class="control">
+                            <label for="producto-1">Bebida *</label>
+                            <input type="text" id="bebida" name="producto" list="lista-cafes" required
+                                    aria-describedby="nota-productos">
+                            </p>
+
+                            <p class="control">
+                            <label for="producto-2">Postre</label>
+                            <input type="text" id="producto-2" name="producto" list="lista-postres"
+                                    pattern="Café americano|Capuchino|Mocaccino|Chocolate caliente|Agua aromática|Empanada de viento|Humita|Torta de naranjilla"
+                                    aria-describedby="nota-productos">
+                            </p>
+                            <p class="control">
+                            <label for="producto-3">Tipo de leche</label>
+                            <input type="text" id="producto-3" name="producto" list="lista-tipos_leche"
+                                    pattern="Café americano|Capuchino|Mocaccino|Chocolate caliente|Agua aromática|Empanada de viento|Humita|Torta de naranjilla"
+                                    aria-describedby="nota-productos">
+                            </p>
+
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Datos para el retiro</legend>
+
+                        <p>
+                            <label>Nombre *</label>
+                            <input type="text" required minlength="2" name="Cliente" autocomplete="name">
+                        </p>
+
+                        <p>
+                            <label>Correo electrónico *</label>
+                            <input type="email" id="email" name="email" autocomplete="email" required>
+                        </p>
+                    </fieldset>
+
+                </form>
+                
             </section>
 
         </main>
@@ -117,7 +187,7 @@
         <aside>
             <h3>Oferta del día</h3>
             <img src="img/cafecito.webp" alt="Cafe emocionado" width="130px" height="150px">
-            hola
+            Ofrecemos un 50% de descuento en tu compra de un Café 
         </aside>
 
         <footer id="contacto">
