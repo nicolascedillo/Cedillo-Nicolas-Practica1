@@ -9,17 +9,16 @@
 
     <body>
 
-        <header>
-            <img alt="Logo cafe" src="img/granos-de-cafe.png" widht="50px" height="50px">
+        <header class="encabezado">
+            <img alt="Logo cafe" src="img/granos-de-cafe.png" width="50px" height="50px">
             <div>
                 <h1>Cafeteria Luca</h1>
                 <p>Café Ecuatoriano desde 1999</p>
             </div>
         </header>
 
-        <nav>
+        <nav class="menu-principal">
             <ul>
-                <li><a href="#quienes_somos">Quienes somos</a></li>
                 <li><a href="#menu">Menu</a></li>
                 <li><a href="#ordenar">Ordenar</a></li>
                 <li><a href="#horarios">Horarios</a></li>
@@ -27,84 +26,97 @@
             </ul>
         </nav>
 
-        <main>
+        <main class="contenido">
 
-            <section id="quienes_somos">
-                <p> </p>
-            </section>
-            
-            <section id="menu">
+            <section id="menu" class="productos">
                 <h2>Menú</h2>
                 <p>Ofrecemos deliciosas bebidas a base de café y postres ideales para acompañarlas!</p>
 
-                <article>
-                    <h3>Café de especialidad</h3>
-                    Capuccinos, expresos, americanos, mocaccinos y flats
+                <article class="producto">
+                    <img src="img/capuccinos.jpg" alt="Capuccinos">
+                    <div class="producto-texto">
+                        <h3>Café de especialidad</h3>
+                        <p>Capuccinos, expresos, americanos, mocaccinos y flats</p>
+                    </div>
                 </article>
 
-                <article>
-                    <h3>Postres</h3>
-                    <p>Tiramisus, tartas vascas y clasicos cheesecakes</p>
+                <article class="producto">
+                    <img src="img/tarta_vasca.jpg" alt="Tartas vascas">
+                    <div class="producto-texto">
+                        <h3>Postres</h3>
+                        <p>Tiramisus, tartas vascas y clasicos cheesecakes</p>
+                    </div>
                 </article>
             </section>
 
             <section id ="horarios">
                 <h2>Horarios de atención</h2>
 
-                <table>
-                    <caption>En caso de algún haber algún feriado, publicaremos el horario de atención en nuestras redes sociales</caption>
-                    <thead>
-                        <tr>
-                            <th scope="col">Día</th>
-                            <th scope="col">Apertura</th>
-                            <th scope="col">Cierre</th>
-                        </tr>
-                    </thead>
+                <div class="desplazable" role="region" tabindex="0">
+                    <table>
+                        <caption>En caso de algún haber algún feriado, publicaremos el horario de atención en nuestras redes sociales</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Día</th>
+                                <th scope="col">Apertura</th>
+                                <th scope="col">Cierre</th>
+                                <th scope="col">Eventos</th>
+                            </tr>
+                        </thead>
 
-                    <tbody>
-                        <tr>
-                            <th scope="row">Lunes</th>
-                            <td>09:00</td>
-                            <td>19:00</td>
-                        </tr>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Lunes</th>
+                                <td>09:00</td>
+                                <td>19:00</td>
+                                <td>Música en vivo</td>
+                            </tr>
 
-                        <tr>
-                            <th scope="row">Martes</th>
-                            <td>09:00</td>
-                            <td>19:00</td>
-                        </tr>
+                            <tr>
+                                <th scope="row">Martes</th>
+                                <td>09:00</td>
+                                <td>19:00</td>
+                                <td>Música en vivo</td>
+                            </tr>
 
-                        <tr>
-                            <th scope="row">Miércoles</th>
-                            <td>09:00</td>
-                            <td>19:00</td>
-                        </tr>
+                            <tr>
+                                <th scope="row">Miércoles</th>
+                                <td>09:00</td>
+                                <td>19:00</td>
+                                <td>Música en vivo</td>
+                            </tr>
 
-                        <tr>
-                            <th scope="row">Jueves</th>
-                            <td>09:00</td>
-                            <td>19:00</td>
-                        </tr>
+                            <tr>
+                                <th scope="row">Jueves</th>
+                                <td>09:00</td>
+                                <td>19:00</td>
+                                <td>Música en vivo</td>
+                            </tr>
 
-                        <tr>
-                            <th scope="row">Viernes</th>
-                            <td>09:00</td>
-                            <td>19:00</td>
-                        </tr>
+                            <tr>
+                                <th scope="row">Viernes</th>
+                                <td>09:00</td>
+                                <td>19:00</td>
+                                <td>Música en vivo</td>
+                            </tr>
 
-                        <tr>
-                            <th scope="row">Sábado</th>
-                            <td>09:00</td>
-                            <td>19:00</td>
-                        </tr>
+                            <tr>
+                                <th scope="row">Sábado</th>
+                                <td>09:00</td>
+                                <td>19:00</td>
+                                <td>Música en vivo</td>
+                            </tr>
 
-                        <tr>
-                            <th scope="row">Domingo</th>
-                            <td>15:00</td>
-                            <td>18:00</td>
-                        </tr>
-                    </tbody>
-                </table>
+                            <tr>
+                                <th scope="row">Domingo</th>
+                                <td>15:00</td>
+                                <td>18:00</td>
+                                <td>Música en vivo</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
 
             </section>
 
@@ -112,7 +124,7 @@
                 <h2>Pedidos online</h2>
                 <p>Lo notificaremos por mail cuando esté listo. Los campos con el * son olbigatorios</p>
 
-                <form>
+                <form class="pedido">
 
                     <fieldset>
                         <legend>Bebida y postre</legend>
@@ -167,12 +179,12 @@
                     <fieldset>
                         <legend>Datos para el retiro</legend>
 
-                        <p>
+                        <p class="control">
                             <label>Nombre *</label>
                             <input type="text" required minlength="2" name="Cliente" autocomplete="name">
                         </p>
 
-                        <p>
+                        <p class="control">
                             <label>Correo electrónico *</label>
                             <input type="email" id="email" name="email" autocomplete="email" required>
                         </p>
@@ -180,24 +192,25 @@
 
                 </form>
                 
+                <button type="submit">Enviar pedido</button>
+
             </section>
 
         </main>
 
-        <aside>
+        <aside class="lateral">
             <h3>Oferta del día</h3>
+            <strong>50% de descuento en tu compra de un capuccino si nos sigues en Instagram </strong>
             <img src="img/cafecito.webp" alt="Cafe emocionado" width="130px" height="150px">
-            Ofrecemos un 50% de descuento en tu compra de un Café 
         </aside>
 
-        <footer id="contacto">
+        <footer id="contacto" class="pie-pagina">
             <h2>Contacto</h2>
             <address>
                 Avenida Paseo de los Cañaris, Cuenca, Ecuador. <br>
                 <a href="tel:0991234567">0991234567</a> <br>
                 <a href="mailto:cafeteria@gmail.com">cafeteria@gmail.com</a>
             </address>
-            <small>Todos los derechos reservados</small>
         </footer>
     </body>
 </html>
