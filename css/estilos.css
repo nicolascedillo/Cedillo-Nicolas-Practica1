@@ -1,17 +1,16 @@
 :root {
   --color-papel: #fdfdfb;
   --color-tarjeta: #ffffff;
-  --color-salvia: #eef3ef;
+  --color-lateral: #eef3ef;
   --color-tinta: #1c1c1a;
   --color-tinta-media: #4d5a50;
   --color-bosque: #1f3d2b;
   --color-bosque-claro: #2e5a40;
-  --color-miel: #f4c95d;
+  --color-cafe: #452829;
   --color-linea: #cfd9d2;
   --color-borde-campo: #5f6f63;
   --color-claro: #ffffff;
   --color-anillo: #1f3d2b;
-  --color-anillo-oscuro: #f4c95d;
 
   --texto-chico: clamp(0.875rem, 0.85rem + 0.12vw, 0.95rem);
   --texto-normal: clamp(1rem, 0.94rem + 0.3vw, 1.15rem);
@@ -22,7 +21,6 @@
   --letra: Arial;
 
   --hueco: clamp(1rem, 0.5rem + 2.5vw, 2.25rem);
-  --esquina: 0.75rem;
 }
 
 body {
@@ -157,7 +155,7 @@ body {
 .menu-principal ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: left;
   gap: 0.25rem 0.5rem;
   margin: 0;
   padding: 0.4rem 1rem;
@@ -182,13 +180,7 @@ body {
   padding-bottom: var(--hueco);
 }
 
-/*
-.contenido section + section {
-  border-top: 2px dashed var(--color-linea);
-}
-*/
-
-/* Carta: tarjetas con Flexbox */
+/* Tarjetas*/
 .productos {
   display: flex;
   flex-wrap: wrap;
@@ -207,17 +199,12 @@ body {
   flex: 1 1 15rem;
   background-color: var(--color-tarjeta);
   border: 1px solid var(--color-linea);
-  border-radius: var(--esquina);
 }
 
 .productos h2,
 .productos > p {
-  /*
-  flex-basis: 100%;*/
   margin-bottom: 0;
 }
-
-
 
 .producto-texto {
   padding: 1rem 1.25rem 0.25rem;
@@ -231,7 +218,6 @@ body {
 .desplazable {
   overflow-x: auto;
   border: 1px solid var(--color-linea);
-  border-radius: var(--esquina);
 }
 
 table {
@@ -264,18 +250,23 @@ thead th {
 .pedido {
   display: flex;
   flex-direction: column;
+  margin: 0;
   gap: 1.5rem;
 }
 
 fieldset {
   margin: 0;
-  padding: 1rem 1.25rem 1.25rem;
+  /*
+  padding: 1rem 1.25rem 1.25rem;*/
   border:none;
 }
 
 legend {
-  padding: 0 0.5rem;
-  font-family: var(--letra);
+  /*
+  padding: 0 0.5rem;*/
+  margin: 0;
+  padding: 0;
+  font-size:larger;
   font-weight: 700;
   color: var(--color-bosque);
 }
@@ -284,7 +275,8 @@ legend {
   max-width: none;
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
+  /*
+  gap: 0.3rem;*/
   margin: 0 0 1rem;
 }
 
@@ -292,26 +284,8 @@ legend {
   margin-bottom: 0;
 }
 
-.grupo-productos {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0 1rem;
-}
-
-/*
-.grupo-productos .control {
-  flex: 1 1 12rem;
-}*/
-
 label {
-  font-family: var(--letra);
-  font-weight: 700;
-}
-
-.nota {
-  margin: 0 0 0.75rem;
-  font-size: var(--texto-chico);
-  color: var(--color-tinta-media);
+  font-weight: 500;
 }
 
 input,
@@ -320,57 +294,36 @@ button {
   font: inherit;
 }
 
-input,
-select {
-  width: 95%;
-  min-height: 2.75rem;
-  padding: 0.45rem 0.7rem;
-  color: var(--color-tinta);
-  background-color: var(--color-tarjeta);
-  border: 2px solid var(--color-borde-campo);
-  border-radius: 0.4rem;
+.area-boton{
+  display:grid;
+  justify-content: center;
+  align-items: center;
 }
-
 
 button {
   align-self: flex-start;
   min-height: 2.75rem;
   padding: 0.65rem 1.75rem;
-  font-family: var(--letra);
   font-weight: 700;
-  color: var(--color-bosque);
-  background-color: var(--color-miel);
+  color: var(--color-claro);
+  background-color: var(--color-cafe);
   margin-top: 2rem;
-  border: 2px solid var(--color-bosque);
-  border-radius: 2rem;
   cursor: pointer;
 }
 
 
-
 /* Lateral */
 .lateral {
-  margin: 0 1rem var(--hueco);
+  display: flex;
+  flex-direction: column;
+  margin: var(--hueco) 1rem var(--hueco);
   padding: 1.25rem;
-  background-color: var(--color-salvia);
-}
-
-.lateral dl {
-  margin: 0 0 1rem;
-}
-
-.lateral dt {
-  font-family: var(--letra);
-  font-weight: 700;
-}
-
-.lateral dd {
-  margin: 0 0 0.6rem;
+  background-color: var(--color-lateral);
+  align-items: center;
 }
 
 .lateral img {
-  width:130px;
-  align-content: center;
+  width:150px;
   padding-top: 1rem;
 }
 
@@ -380,17 +333,12 @@ button {
   text-align: center;
   color: var(--color-claro);
   background-color: var(--color-bosque);
-  --color-anillo: var(--color-anillo-oscuro);
 }
 
 .pie-pagina h2,
 .pie-pagina a {
   color: var(--color-claro);
-}
-
-.pie-pagina p {
-  margin-left: auto;
-  margin-right: auto;
+  text-decoration: none;
 }
 
 .pie-pagina address {
@@ -410,7 +358,7 @@ button {
       "encabezado encabezado encabezado encabezado"
       "menu menu menu menu"
       ". lateral contenido ."
-      "pie pie pie pie";
+      "pie pie pie pie";  
     column-gap: 2rem;
   }
 

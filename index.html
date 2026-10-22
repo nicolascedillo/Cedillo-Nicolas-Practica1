@@ -124,13 +124,13 @@
             </section>
 
             <section id="ordenar">
-                <h2>Pedidos online</h2>
+                <h2>Ordenar online</h2>
                 <p>Lo notificaremos por mail cuando esté listo. Los campos con el * son olbigatorios</p>
 
                 <form class="pedido">
 
                     <fieldset>
-                        <legend>Bebida y postre</legend>
+                        <legend>Comida</legend>
 
                          <datalist id="lista-cafes">
                             <option value="Café americano"></option>
@@ -165,13 +165,11 @@
                             <p class="control">
                             <label for="producto-2">Postre</label>
                             <input type="text" id="producto-2" name="producto" list="lista-postres"
-                                    pattern="Café americano|Capuchino|Mocaccino|Chocolate caliente|Agua aromática|Empanada de viento|Humita|Torta de naranjilla"
                                     aria-describedby="nota-productos">
                             </p>
                             <p class="control">
                             <label for="producto-3">Tipo de leche</label>
                             <input type="text" id="producto-3" name="producto" list="lista-tipos_leche"
-                                    pattern="Café americano|Capuchino|Mocaccino|Chocolate caliente|Agua aromática|Empanada de viento|Humita|Torta de naranjilla"
                                     aria-describedby="nota-productos">
                             </p>
 
@@ -193,9 +191,14 @@
                         </p>
                     </fieldset>
 
+                    <div class="area-boton">
+                        <button type="submit">Enviar pedido</button>
+                    </div>
+                    
+
                 </form>
                 
-                <button type="submit">Enviar pedido</button>
+                
 
             </section>
 
@@ -203,7 +206,7 @@
 
         <aside class="lateral">
             <h3>Oferta del día</h3>
-            <strong>50% de descuento en tu compra de un capuccino si nos sigues en Instagram </strong>
+            <p><strong>50% de descuento</strong> en tu compra de un capuccino si nos sigues en Instagram</p>
             <img src="img/cafecito.webp" alt="Cafe emocionado" width="130px" height="150px">
         </aside>
 
