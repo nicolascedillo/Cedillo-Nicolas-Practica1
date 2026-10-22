@@ -19,15 +19,14 @@
   --titulo-2: clamp(1.375rem, 1.05rem + 1.5vw, 2.125rem);
   --titulo-1: clamp(1.875rem, 1.2rem + 3vw, 3.25rem);
 
-  --letra-cuerpo: Georgia, "Times New Roman", serif;
-  --letra-titulos: "Trebuchet MS", "Gill Sans", "Segoe UI", sans-serif;
+  --letra: Arial;
 
   --hueco: clamp(1rem, 0.5rem + 2.5vw, 2.25rem);
   --esquina: 0.75rem;
 }
 
 body {
-  font-family: var(--letra-cuerpo);
+  font-family: var(--letra);
   font-size: var(--texto-normal);
   line-height: 1.7;
   color: var(--color-tinta);
@@ -35,7 +34,7 @@ body {
 }
 
 h1, h2, h3 {
-  font-family: var(--letra-titulos);
+  font-family: var(--letra);
   line-height: 1.15;
   color: var(--color-bosque);
 }
@@ -62,7 +61,6 @@ p {
 }
 
 img {
-  /*display: block;*/
   max-width: 100%;
   height: auto;
 }
@@ -124,9 +122,6 @@ body {
 }
 
 .lateral {
-      top: 1rem;
-    align-self: start;
-    margin: var(--hueco) 0 0;
   grid-area: lateral;
 }
 
@@ -150,18 +145,13 @@ body {
   color: var(--color-claro);
 }
 
-.encabezado p {
-  margin: 0rem 0 0;
-}
-
-.encabezado img {
-  flex-shrink: 0;
-  width: clamp(3rem, 2rem + 4vw, 4.5rem);
-}
 
 /* Menu */
 .menu-principal {
   background-color: var(--color-bosque-claro);
+  /*
+  position:sticky;
+  top:0;*/
 }
 
 .menu-principal ul {
@@ -177,15 +167,10 @@ body {
 .menu-principal a {
   display: block;
   padding: 0.6rem 0.9rem;
-  font-family: var(--letra-titulos);
   color: var(--color-claro);
   text-decoration: none;
-  border-bottom: 3px solid transparent;
 }
 
-.menu-principal a:hover {
-  border-bottom-color: var(--color-miel);
-}
 
 /* Texto */
 .contenido {
@@ -207,6 +192,12 @@ body {
 .productos {
   display: flex;
   flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.lista-productos {
+  display: flex;
+  flex-wrap: wrap;
   gap: 1.5rem;
 }
 
@@ -217,21 +208,23 @@ body {
   background-color: var(--color-tarjeta);
   border: 1px solid var(--color-linea);
   border-radius: var(--esquina);
-  /*overflow: hidden;*/
 }
 
 .productos h2,
 .productos > p {
-  flex-basis: 100%;
+  /*
+  flex-basis: 100%;*/
   margin-bottom: 0;
 }
 
-.producto img {
-  width: 100%;
-}
+
 
 .producto-texto {
   padding: 1rem 1.25rem 0.25rem;
+}
+
+.producto-texto p{
+  margin-top:0;
 }
 
 /* Tabla */
@@ -257,19 +250,14 @@ caption {
 th,
 td {
   padding: 0.65rem 1rem;
-  text-align: left;
+  text-align: center;
   border-bottom: 1px solid var(--color-linea);
 }
 
 thead th {
-  font-family: var(--letra-titulos);
+  font-family: var(--letra);
   color: var(--color-claro);
   background-color: var(--color-bosque);
-}
-
-td:last-child,
-thead th:last-child {
-  text-align: right;
 }
 
 /* Formulario */
@@ -282,12 +270,12 @@ thead th:last-child {
 fieldset {
   margin: 0;
   padding: 1rem 1.25rem 1.25rem;
-  border: 2px solid var(--color-linea);
+  border:none;
 }
 
 legend {
   padding: 0 0.5rem;
-  font-family: var(--letra-titulos);
+  font-family: var(--letra);
   font-weight: 700;
   color: var(--color-bosque);
 }
@@ -310,12 +298,13 @@ legend {
   gap: 0 1rem;
 }
 
+/*
 .grupo-productos .control {
   flex: 1 1 12rem;
-}
+}*/
 
 label {
-  font-family: var(--letra-titulos);
+  font-family: var(--letra);
   font-weight: 700;
 }
 
@@ -347,7 +336,7 @@ button {
   align-self: flex-start;
   min-height: 2.75rem;
   padding: 0.65rem 1.75rem;
-  font-family: var(--letra-titulos);
+  font-family: var(--letra);
   font-weight: 700;
   color: var(--color-bosque);
   background-color: var(--color-miel);
@@ -364,7 +353,6 @@ button {
   margin: 0 1rem var(--hueco);
   padding: 1.25rem;
   background-color: var(--color-salvia);
-  border-left: 6px solid var(--color-miel);
 }
 
 .lateral dl {
@@ -372,7 +360,7 @@ button {
 }
 
 .lateral dt {
-  font-family: var(--letra-titulos);
+  font-family: var(--letra);
   font-weight: 700;
 }
 
@@ -427,7 +415,7 @@ button {
   }
 
   .contenido {
-    padding: 0;
+    padding: 1rem;
   }
 
   .lateral {
