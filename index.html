@@ -3,38 +3,46 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Cafeteria Luca - Café Ecuatoriano</title>
+        <title>Cafetería Luca - Café Ecuatoriano</title>
         <link rel="stylesheet" href="css/estilos.css">
     </head>
 
     <body>
 
+        <a class="ir-contenido" href="#menu">Saltar al contenido</a>
+
         <header class="encabezado">
-            <img alt="Logo cafe" src="img/granos-de-cafe.png" width="50px" height="50px">
+            <img alt="Logo de cafeteria Luca" src="img/granos-de-cafe.png" width="50" height="50">
             <div>
-                <h1>Cafeteria Luca</h1>
+                <h1>Cafetería Luca</h1>
                 <p>Café Ecuatoriano desde 1999</p>
             </div>
         </header>
 
         <nav class="menu-principal">
             <ul>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#ordenar">Ordenar</a></li>
+                <li><a href="#menu">Menú</a></li>
                 <li><a href="#horarios">Horarios</a></li>
+                <li><a href="#ordenar">Ordenar</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
 
+        <aside class="lateral">
+            <h3>Oferta del día</h3>
+            <p><strong>50% de descuento</strong> en tu compra de un <b>Capuccino</b> si nos sigues en <a href="https:www.instagram.com">Instagram</a></p>
+            <img src="img/cafecito.webp" alt="Cafe animado con los brazos abiertos" width="130" height="150">
+        </aside>
+
         <main class="contenido">
 
-            <section id="menu" class="productos">
+            <section id="menu">
                 <h2>Menú</h2>
                 <p>Ofrecemos deliciosas bebidas a base de café y postres ideales para acompañarlas!</p>
 
                 <div class="lista-productos">
                     <article class="producto">
-                        <img src="img/capuccinos.jpg" alt="Capuccinos">
+                        <img src="img/capuccinos.jpg" alt="Dos capuccinos sobre una mesa">
                         <div class="producto-texto">
                             <h3>Café de especialidad</h3>
                             <p>Capuccinos, expresos, americanos, mocaccinos y flats</p>
@@ -42,10 +50,10 @@
                     </article>
 
                     <article class="producto">
-                        <img src="img/tarta_vasca.jpg" alt="Tartas vascas">
+                        <img src="img/tarta_vasca.jpg" alt="Porcion de tarta vasca con mermleada servida">
                         <div class="producto-texto">
                             <h3>Postres</h3>
-                            <p>Tiramisus, tartas vascas y clasicos cheesecakes</p>
+                            <p>Tiramisus, tartas vascas y cheesecakes</p>
                         </div>
                     </article>
                 </div>
@@ -56,7 +64,7 @@
 
                 <div class="desplazable" role="region" tabindex="0">
                     <table>
-                        <caption>En caso de algún haber algún feriado, publicaremos el horario de atención en nuestras redes sociales</caption>
+                        <caption>En caso de haber algún feriado, publicaremos el horario de atención en nuestras redes sociales</caption>
                         <thead>
                             <tr>
                                 <th scope="col">Día</th>
@@ -70,8 +78,8 @@
                             
                             <tr>
                                 <th scope="row">Lunes</th>
-                                <td>09:00</td>
-                                <td>19:00</td>
+                                <td>11:00</td>
+                                <td>18:00</td>
                                 <td>Música en vivo</td>
                             </tr>
 
@@ -79,14 +87,14 @@
                                 <th scope="row">Martes</th>
                                 <td>09:00</td>
                                 <td>19:00</td>
-                                <td>Música en vivo</td>
+                                <td>Open Mic</td>
                             </tr>
 
                             <tr>
                                 <th scope="row">Miércoles</th>
                                 <td>09:00</td>
                                 <td>19:00</td>
-                                <td>Música en vivo</td>
+                                <td>Taller de Latte art</td>
                             </tr>
 
                             <tr>
@@ -98,23 +106,23 @@
 
                             <tr>
                                 <th scope="row">Viernes</th>
-                                <td>09:00</td>
-                                <td>19:00</td>
-                                <td>Música en vivo</td>
+                                <td>10:00</td>
+                                <td>20:00</td>
+                                <td>Café y lectura</td>
                             </tr>
 
                             <tr>
                                 <th scope="row">Sábado</th>
-                                <td>09:00</td>
-                                <td>19:00</td>
-                                <td>Música en vivo</td>
+                                <td>11:00</td>
+                                <td>18:00</td>
+                                <td>Café y lectura</td>
                             </tr>
 
                             <tr>
                                 <th scope="row">Domingo</th>
                                 <td>15:00</td>
                                 <td>18:00</td>
-                                <td>Música en vivo</td>
+                                <td>-</td>
                             </tr>
                         </tbody>
                     </table>
@@ -125,25 +133,25 @@
 
             <section id="ordenar">
                 <h2>Ordenar online</h2>
-                <p>Lo notificaremos por mail cuando esté listo. Los campos con el * son olbigatorios</p>
+                <p>Lo notificaremos por mail cuando esté listo. Los campos con el * son obligatorios</p>
 
                 <form class="pedido">
 
                     <fieldset>
-                        <legend>Comida</legend>
+                        <legend>Pedido</legend>
 
                          <datalist id="lista-cafes">
                             <option value="Café americano"></option>
                             <option value="Capuchino"></option>
                             <option value="Mocaccino"></option>
-                            <option value="Chocolate caliente"></option>
-                            <option value="Agua aromática"></option>
+                            <option value="Expreso"></option>
+                            <option value="Flat"></option>
                         </datalist>
 
                         <datalist id="lista-postres">
                             <option value="Tarta Vasca"></option>
                             <option value="Tiramisú"></option>
-                            <option value="Mocaccino"></option>
+                            <option value="Cheesecake"></option>
                         </datalist>
 
                         <datalist id="lista-tipos_leche">
@@ -157,19 +165,19 @@
                         <div>
 
                             <p class="control">
-                            <label for="producto-1">Bebida *</label>
-                            <input type="text" id="bebida" name="producto" list="lista-cafes" required
+                            <label for="bebida">Bebida *</label>
+                            <input type="text" id="bebida" name="bebida" list="lista-cafes" required
                                     aria-describedby="nota-productos">
                             </p>
 
                             <p class="control">
-                            <label for="producto-2">Postre</label>
-                            <input type="text" id="producto-2" name="producto" list="lista-postres"
+                            <label for="postre">Postre</label>
+                            <input type="text" id="postre" name="postre" list="lista-postres"
                                     aria-describedby="nota-productos">
                             </p>
                             <p class="control">
-                            <label for="producto-3">Tipo de leche</label>
-                            <input type="text" id="producto-3" name="producto" list="lista-tipos_leche"
+                            <label for="leche">Tipo de leche</label>
+                            <input type="text" id="leche" name="leche" list="lista-tipos_leche"
                                     aria-describedby="nota-productos">
                             </p>
 
@@ -181,13 +189,18 @@
                         <legend>Datos para el retiro</legend>
 
                         <p class="control">
-                            <label>Nombre *</label>
-                            <input type="text" required minlength="2" name="Cliente" autocomplete="name">
+                            <label for="nombre">Nombre *</label>
+                            <input type="text" id="nombre" required minlength="2" name="Cliente" autocomplete="name">
                         </p>
 
                         <p class="control">
                             <label>Correo electrónico *</label>
                             <input type="email" id="email" name="email" autocomplete="email" required>
+                        </p>
+
+                        <p class="control">
+                            <label>Hora de retiro *</label>
+                            <input type="time" id="hora_retiro" min="09:00" max="19:00">
                         </p>
                     </fieldset>
 
@@ -202,13 +215,7 @@
 
             </section>
 
-        </main>
-
-        <aside class="lateral">
-            <h3>Oferta del día</h3>
-            <p><strong>50% de descuento</strong> en tu compra de un capuccino si nos sigues en Instagram</p>
-            <img src="img/cafecito.webp" alt="Cafe emocionado" width="130px" height="150px">
-        </aside>
+        </main>        
 
         <footer id="contacto" class="pie-pagina">
             <h2>Contacto</h2>
