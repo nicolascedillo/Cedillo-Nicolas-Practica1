@@ -235,13 +235,12 @@ thead th {
   display: flex;
   flex-direction: column;
   margin: 0;
+  /*border: 5px dotted var(--color-cafe);*/
   gap: 1.5rem;
 }
 
 fieldset {
   margin: 0;
-  /*
-  padding: 1rem 1.25rem 1.25rem;*/
   border:none;
 }
 
@@ -311,6 +310,8 @@ button {
   padding-top: 1rem;
 }
 
+.lateral h2 { font-size: var(--titulo-3); }
+
 /* Pie */
 .pie-pagina {
   padding: var(--hueco);
@@ -329,13 +330,12 @@ button {
 }
 
 
-
 @media (min-width: 800px) {
   body {
     grid-template-columns:
       minmax(1rem, 1fr)
       minmax(13rem, 16rem)
-      minmax(0, 44rem)
+      minmax(0, 50rem)
       minmax(1rem, 1fr);
     grid-template-areas:
       "encabezado encabezado encabezado encabezado"

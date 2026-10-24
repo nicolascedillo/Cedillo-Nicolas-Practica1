@@ -9,17 +9,17 @@
 
     <body>
 
-        <a class="ir-contenido" href="#menu">Saltar al contenido</a>
+        <a class="ir-contenido" href="#principal">Saltar al contenido</a>
 
         <header class="encabezado">
-            <img alt="Logo de cafeteria Luca" src="img/granos-de-cafe.png" width="50" height="50">
+            <img alt="Logo de Cafetería Luca" src="img/granos-de-cafe.png" width="90" height="90">
             <div>
                 <h1>Cafetería Luca</h1>
                 <p>Café Ecuatoriano desde 1999</p>
             </div>
         </header>
 
-        <nav class="menu-principal">
+        <nav class="menu-principal" aria-label="Navegación principal">
             <ul>
                 <li><a href="#menu">Menú</a></li>
                 <li><a href="#horarios">Horarios</a></li>
@@ -28,16 +28,16 @@
             </ul>
         </nav>
 
-        <aside class="lateral">
-            <h3>Oferta del día</h3>
-            <p><strong>50% de descuento</strong> en tu compra de un <b>Capuccino</b> si nos sigues en <a href="https:www.instagram.com">Instagram</a></p>
-            <img src="img/cafecito.webp" alt="Cafe animado con los brazos abiertos" width="130" height="150">
+        <aside class="lateral" aria-labelledby="titulo-oferta">
+            <h2 id="titulo-oferta">Oferta del día</h2>
+            <p><strong>50% de descuento</strong> en tu compra de un <b>Capuccino</b> si nos sigues en <a href="https://www.instagram.com/">Instagram</a></p>
+            <img src="img/cafecito.webp" alt="Café animado con los brazos abiertos" width="130" height="150">
         </aside>
 
-        <main class="contenido">
+        <main class="contenido" id="principal">
 
-            <section id="menu">
-                <h2>Menú</h2>
+            <section id="menu" aria-labelledby="titulo-menu">
+                <h2 id="titulo-menu">Menú</h2>
                 <p>Ofrecemos deliciosas bebidas a base de café y postres ideales para acompañarlas!</p>
 
                 <div class="lista-productos">
@@ -50,21 +50,22 @@
                     </article>
 
                     <article class="producto">
-                        <img src="img/tarta_vasca.jpg" alt="Porcion de tarta vasca con mermleada servida">
+                        <img src="img/tarta_vasca.jpg" alt="Porción de tarta vasca con mermelada servida">
                         <div class="producto-texto">
                             <h3>Postres</h3>
-                            <p>Tiramisus, tartas vascas y cheesecakes</p>
+                            <p>Tiramisús, tartas vascas y cheesecakes</p>
                         </div>
                     </article>
                 </div>
             </section>
 
-            <section id ="horarios">
-                <h2>Horarios de atención</h2>
+            <section id="horarios" aria-labelledby="titulo-horarios">
+                <h2 id="titulo-horarios">Horarios de atención</h2>
+                <p>En caso de haber algún feriado, publicaremos el horario de atención en nuestras redes sociales.</p>
 
-                <div class="desplazable" role="region" tabindex="0">
-                    <table>
-                        <caption>En caso de haber algún feriado, publicaremos el horario de atención en nuestras redes sociales</caption>
+                <div class="desplazable" role="region" aria-label="Tabla de horarios, desplazable horizontalmente" tabindex="0">
+                    <table aria-describedby="horarios">
+                        <caption>Horario y eventos</caption>
                         <thead>
                             <tr>
                                 <th scope="col">Día</th>
@@ -75,7 +76,7 @@
                         </thead>
 
                         <tbody>
-                            
+
                             <tr>
                                 <th scope="row">Lunes</th>
                                 <td>11:00</td>
@@ -87,7 +88,7 @@
                                 <th scope="row">Martes</th>
                                 <td>09:00</td>
                                 <td>19:00</td>
-                                <td>Open Mic</td>
+                                <td>Microfono abierto</td>
                             </tr>
 
                             <tr>
@@ -122,7 +123,7 @@
                                 <th scope="row">Domingo</th>
                                 <td>15:00</td>
                                 <td>18:00</td>
-                                <td>-</td>
+                                <td>---</td>
                             </tr>
                         </tbody>
                     </table>
@@ -131,18 +132,20 @@
 
             </section>
 
-            <section id="ordenar">
-                <h2>Ordenar online</h2>
+            <section id="ordenar" aria-labelledby="titulo-ordenar">
+                <h2 id="titulo-ordenar">Ordenar online</h2>
                 <p>Lo notificaremos por mail cuando esté listo. Los campos con el * son obligatorios</p>
 
                 <form class="pedido">
 
-                    <fieldset>
+                    <fieldset aria-describedby="nota-productos">
                         <legend>Pedido</legend>
 
-                         <datalist id="lista-cafes">
+                        <p id="nota-productos">Escribe o elige una opción de la lista de sugerencias</p>
+
+                        <datalist id="lista-cafes">
                             <option value="Café americano"></option>
-                            <option value="Capuchino"></option>
+                            <option value="Capuccino"></option>
                             <option value="Mocaccino"></option>
                             <option value="Expreso"></option>
                             <option value="Flat"></option>
@@ -165,20 +168,18 @@
                         <div>
 
                             <p class="control">
-                            <label for="bebida">Bebida *</label>
-                            <input type="text" id="bebida" name="bebida" list="lista-cafes" required
-                                    aria-describedby="nota-productos">
+                                <label for="bebida">Bebida *</label>
+                                <input type="text" id="bebida" name="bebida" list="lista-cafes" required>
                             </p>
 
                             <p class="control">
-                            <label for="postre">Postre</label>
-                            <input type="text" id="postre" name="postre" list="lista-postres"
-                                    aria-describedby="nota-productos">
+                                <label for="postre">Postre</label>
+                                <input type="text" id="postre" name="postre" list="lista-postres">
                             </p>
+
                             <p class="control">
-                            <label for="leche">Tipo de leche</label>
-                            <input type="text" id="leche" name="leche" list="lista-tipos_leche"
-                                    aria-describedby="nota-productos">
+                                <label for="leche">Tipo de leche</label>
+                                <input type="text" id="leche" name="leche" list="lista-tipos_leche">
                             </p>
 
                         </div>
@@ -190,32 +191,34 @@
 
                         <p class="control">
                             <label for="nombre">Nombre *</label>
-                            <input type="text" id="nombre" required minlength="2" name="Cliente" autocomplete="name">
+                            <input type="text" id="nombre" name="nombre" required minlength="2" maxlength="60"
+                                    pattern="[A-Za-z]+" title="Solo letras y espacios"
+                                    autocomplete="name" aria-describedby="ayuda-nombre">
+                            <small id="ayuda-nombre">Solo letras y espacios</small>
                         </p>
 
                         <p class="control">
-                            <label>Correo electrónico *</label>
-                            <input type="email" id="email" name="email" autocomplete="email" required>
+                            <label for="correo">Correo electrónico *</label>
+                            <input type="email" id="correo" name="correo" autocomplete="email" required>
                         </p>
 
                         <p class="control">
-                            <label>Hora de retiro *</label>
-                            <input type="time" id="hora_retiro" min="09:00" max="19:00">
+                            <label for="hora">Hora de retiro *</label>
+                            <input type="time" id="hora" name="hora" required min="09:00" max="19:00"
+                                    aria-describedby="ayuda-hora">
+                            <small id="ayuda-hora">Entre las 09:00 y las 19:00. Revisa el horario del día en la tabla de horarios</small>
                         </p>
                     </fieldset>
 
                     <div class="area-boton">
                         <button type="submit">Enviar pedido</button>
                     </div>
-                    
 
                 </form>
-                
-                
 
             </section>
 
-        </main>        
+        </main>
 
         <footer id="contacto" class="pie-pagina">
             <h2>Contacto</h2>
