@@ -197,9 +197,16 @@
                             <small id="ayuda-nombre">Solo letras y espacios</small>
                         </p>
 
+                        <datalist id="lista-correos">
+                            <option value="nombre@gmail.com"></option>
+                            <option value="nombre@hotmail.com"></option>
+                            <option value="nombre@outlook.com"></option>
+                        </datalist>
+
                         <p class="control">
-                            <label for="correo">Correo electrónico *</label>
-                            <input type="email" id="correo" name="correo" autocomplete="email" required>
+                            <label for="correo">Correo(s) electrónico(s) *</label>
+                            <input type="email" id="correo" name="correo" autocomplete="email" 
+                                    multiple list="lista-correos" required>
                         </p>
 
                         <p class="control">
